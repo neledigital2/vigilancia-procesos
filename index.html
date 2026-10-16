@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vigilancia de Procesos Judiciales</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">Vigilancia<span>Judicial</span><span class="badge-demo">Prototipo</span></div>
+  <nav>
+    <a href="index.html">Registro</a>
+    <a href="panel.html">Panel</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Entérate de cada movimiento de tu proceso, por WhatsApp</h1>
+    <p>Vigilamos tu proceso en SAMAI (contencioso administrativo) y TYBA / Justicia XXI Web (jurisdicción ordinaria) y te avisamos apenas haya una novedad.</p>
+    <div class="price-tag">Suscripción mensual: <strong>$49.000 COP</strong></div>
+  </section>
+
+  <section class="card">
+    <h2>Registra tu proceso</h2>
+    <form id="registro-form" novalidate>
+      <div class="field">
+        <label for="radicado">Número de radicado <span class="hint">(23 dígitos)</span></label>
+        <input type="text" id="radicado" name="radicado" placeholder="Ej: 11001310300120230012300" maxlength="23" autocomplete="off">
+        <div class="error-text" id="error-radicado">El radicado debe tener exactamente 23 dígitos numéricos.</div>
+      </div>
+
+      <div class="field">
+        <label for="whatsapp">Número de WhatsApp <span class="hint">(con indicativo de país)</span></label>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ej: +57 300 1234567" autocomplete="off">
+        <div class="error-text" id="error-whatsapp">Ingresa un número de WhatsApp válido.</div>
+      </div>
+
+      <div class="field">
+        <label for="plataforma">Plataforma donde se consulta el proceso</label>
+        <select id="plataforma" name="plataforma">
+          <option value="samai">SAMAI (contencioso administrativo)</option>
+          <option value="tyba">TYBA / Justicia XXI Web (jurisdicción ordinaria)</option>
+          <option value="no-se">No estoy seguro</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>
+          <input type="checkbox" id="consentimiento" style="width:auto; display:inline; margin-right:6px;">
+          Autorizo el tratamiento de mis datos personales para recibir avisos por WhatsApp sobre este proceso.
+        </label>
+      </div>
+
+      <button type="submit">Registrar proceso</button>
+    </form>
+  </section>
+
+  <section class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Registras tu radicado</h3>
+      <p>Ingresas el número de 23 dígitos y tu WhatsApp una sola vez.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Vigilamos el proceso</h3>
+      <p>Consultamos periódicamente SAMAI o TYBA buscando actuaciones nuevas.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Te avisamos por WhatsApp</h3>
+      <p>Apenas hay una novedad relevante, te llega el aviso directo al celular.</p>
+    </div>
+  </section>
+
+  <p class="disclaimer">
+    Este es un <strong>prototipo de demostración</strong>. El registro guarda tus datos solo en este navegador
+    (no se envían a ningún servidor) y los avisos del panel son simulados, para validar la idea antes de
+    construir la versión real con consulta automática y WhatsApp Business API.
+  </p>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

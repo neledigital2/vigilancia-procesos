@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de Procesos Vigilados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">Vigilancia<span>Judicial</span><span class="badge-demo">Prototipo</span></div>
+  <nav>
+    <a href="index.html">Registro</a>
+    <a href="panel.html">Panel</a>
+  </nav>
+</header>
+
+<main>
+  <div class="panel-header">
+    <h1>Mis procesos vigilados</h1>
+    <div class="subscriber-chip" id="subscriber-chip">Sin registro aún</div>
+  </div>
+
+  <div id="panel-content"></div>
+
+  <section class="whatsapp-log">
+    <h2 style="color:var(--navy); font-size:1.1rem;">Últimos avisos enviados (simulados)</h2>
+    <div id="whatsapp-log-list"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+<script>
+  renderPanel();
+</script>
+</body>
+</html>
